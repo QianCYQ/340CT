@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="20dp"
+    android:layout_marginRight="20dp"
+    android:layout_marginTop="5dp"
+    android:padding="2dp"
+    app:cardCornerRadius="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/BookTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Name"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:padding="10dp">
+        </TextView>
+
+        <ImageView
+            android:id="@+id/BookImage"
+            android:layout_width="111dp"
+            android:layout_height="152dp"
+            android:layout_below="@+id/BookTitle"
+            android:paddingTop="2dp"
+            android:paddingRight="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="10dp"
+            android:scaleType="fitCenter">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/BookPriceRM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/BookTitle"
+            android:layout_toRightOf="@+id/BookImage"
+            android:text="@string/RM"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:padding="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/BookPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/BookTitle"
+            android:layout_toRightOf="@id/BookPriceRM"
+            android:text="00.00"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:padding="10dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/BookGenre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/BookPriceRM"
+            android:layout_toRightOf="@id/BookImage"
+            android:text="Genre"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:layout_marginBottom="5dp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/BookDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/BookImage"
+            android:text="Description............"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:paddingTop="2dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="2dp">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/BookDescription"
+            android:layout_alignParentRight="true"
+            app:cardCornerRadius="10dp"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            >
+            <TextView
+                android:id="@+id/AddToCartButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/grey"
+                android:text="@string/AddToCartButton"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:gravity="center">
+            </TextView>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
