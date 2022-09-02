@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".MainActivity"
+    >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/Login"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        android:layout_marginBottom="30dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textColor="@color/black"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        app:cardCornerRadius="10dp">
+
+        <EditText
+            android:id="@+id/UserEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="13"
+            android:padding="5dp"
+            android:inputType="textEmailAddress"
+            android:background="@color/grey"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        android:layout_marginTop="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:textColor="@color/black"
+            android:paddingTop="10dp"
+            android:paddingLeft="5dp"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp"
+        app:cardCornerRadius="10dp">
+
+        <EditText
+            android:id="@+id/UserPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="13"
+            android:padding="5dp"
+            android:inputType="textPassword"
+            android:background="@color/grey"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="70dp"
+        android:layout_marginRight="70dp">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/ForgotPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Password"
+            android:textColor="@color/fossil"
+            android:textSize="18sp"
+            />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginRight="140dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="10dp">
+
+        <TextView
+            android:id="@+id/LoginButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="13"
+            android:padding="5dp"
+            android:text="@string/Login"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:background="@color/grey"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:layout_width="276dp"
+        android:layout_height="87dp"
+        android:src="@drawable/design1">
+    </ImageView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Register1"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+    </TextView>
+
+    <TextView
+        android:id="@+id/GoToRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Register2"
+        android:textSize="18sp"
+        android:textColor="@color/black">
+    </TextView>
+
+
+
+
+  </LinearLayout>

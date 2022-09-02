@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">BookStore</string>
+    <string name="Login"><b>Login</b></string>
+    <string name="Register"><b>Register</b></string>
+
+    <string name="Password"><i>Forgot Password?</i></string>
+    <string name="Register1"><i>Need an account?</i></string>
+    <string name="Register2"><i><u>REGISTER NOW</u></i></string>
+
+    <string name="RegisterButton"><b>Create Account</b></string>
+    <string name="BackToLoginButton"><b>Back To Login Page</b></string>
+
+    <string name="RM"><b>RM</b></string>
+    <string name="AddToCartButton">Add to Cart</string>
+
+
+</resources>
