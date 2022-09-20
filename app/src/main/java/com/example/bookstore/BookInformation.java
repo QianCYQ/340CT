@@ -1,11 +1,10 @@
 package com.example.bookstore;
 
 public class BookInformation {
-    private String mBookTitle, mBookImage, mBookDescription, mBookGenre;
-    private double mBookPrice;
+    private String mBookTitle, mBookImage, mBookDescription, mBookGenre, mBookPrice;
 
 
-    public BookInformation(String bookTitle, String bookImage, String bookDescription, String bookGenre, double bookPrice) {
+    public BookInformation(String bookTitle, String bookImage, String bookDescription, String bookGenre, String bookPrice) {
         mBookTitle = bookTitle;
         mBookImage = bookImage;
         mBookDescription = bookDescription;
@@ -45,11 +44,11 @@ public class BookInformation {
         mBookGenre = bookGenre;
     }
 
-    public double getBookPrice() {
+    public String getBookPrice() {
         return mBookPrice;
     }
 
-    public void setBookPrice(double bookPrice) {
+    public void setBookPrice(String bookPrice) {
         mBookPrice = bookPrice;
     }
 }

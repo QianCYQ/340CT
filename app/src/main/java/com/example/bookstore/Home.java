@@ -30,7 +30,6 @@ public class Home extends AppCompatActivity {
         mUserProfileButton = findViewById(R.id.UserProfileButton);
         mLogoutButton = findViewById(R.id.LogoutButton);
 
-
         mBookCatalogueButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,7 +41,7 @@ public class Home extends AppCompatActivity {
         mLogoutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                fAuth.signOut();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
                 finish();
             }
         });

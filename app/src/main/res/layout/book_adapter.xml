@@ -28,11 +28,12 @@
             android:layout_width="111dp"
             android:layout_height="152dp"
             android:layout_below="@+id/BookTitle"
+            android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:paddingRight="2dp"
             android:paddingBottom="2dp"
-            android:paddingLeft="10dp"
             android:scaleType="fitCenter">
+
         </ImageView>
 
         <TextView
@@ -41,10 +42,11 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/BookTitle"
             android:layout_toRightOf="@+id/BookImage"
+            android:padding="10dp"
             android:text="@string/RM"
             android:textColor="@color/black"
-            android:textSize="30sp"
-            android:padding="10dp">
+            android:textSize="30sp">
+
         </TextView>
 
         <TextView
@@ -53,11 +55,12 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/BookTitle"
             android:layout_toRightOf="@id/BookPriceRM"
+            android:padding="10dp"
             android:text="00.00"
             android:textColor="@color/black"
             android:textSize="30sp"
-            android:textStyle="bold"
-            android:padding="10dp">
+            android:textStyle="bold">
+
         </TextView>
 
         <TextView
@@ -97,16 +100,15 @@
             android:padding="10dp"
             android:layout_margin="10dp"
             >
-            <TextView
+            <Button
                 android:id="@+id/AddToCartButton"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/grey"
                 android:text="@string/AddToCartButton"
-                android:textColor="@color/black"
-                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textSize="12sp"
                 android:gravity="center">
-            </TextView>
+            </Button>
 
         </androidx.cardview.widget.CardView>
 

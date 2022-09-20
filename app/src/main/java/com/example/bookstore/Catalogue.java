@@ -28,7 +28,7 @@ public class Catalogue extends AppCompatActivity {
     private FirebaseFirestore fStore;
 
     private RecyclerView recyclerView;
-    private ArrayList<BookInformation> mBookInformations;
+    private ArrayList<BookInformation> mBookInformation;
 
     private CatalogueAdapter mCatalogueAdapter;
 
@@ -43,9 +43,9 @@ public class Catalogue extends AppCompatActivity {
         recyclerView = findViewById(R.id.RVCatalogue);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mBookInformations = new ArrayList<>();
+        mBookInformation = new ArrayList<>();
 
-        mCatalogueAdapter = new CatalogueAdapter(mBookInformations, Catalogue.this);
+        mCatalogueAdapter = new CatalogueAdapter(mBookInformation, Catalogue.this);
 
         
         readBookInformationDB();
@@ -66,10 +66,10 @@ public class Catalogue extends AppCompatActivity {
                     String ImageURL = documentSnapshot.getString("ImageURL");
                     String Description = documentSnapshot.getString("Description");
                     String Genre = documentSnapshot.getString("Category");
-                    Double Price = documentSnapshot.getDouble("Cost");
+                    String Price = documentSnapshot.getString("Cost");
 
                     BookInformation bookInformation = new BookInformation(Title,ImageURL,Description,Genre,Price);
-                    mBookInformations.add(bookInformation);
+                    mBookInformation.add(bookInformation);
                 }
                 mCatalogueAdapter.notifyDataSetChanged();
             }
