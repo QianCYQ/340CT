@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Checkout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/actAddress"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Delivery Address"
+            android:layout_marginStart="10dp"
+            android:background="@android:color/transparent">
+
+        </EditText>
+</LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+
+        android:id="@+id/RVCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="10dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+<!--    <TextView-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Total"-->
+<!--        android:textStyle="bold"-->
+<!--        android:textSize="10dp"-->
+<!--        android:textAlignment="textEnd"-->
+<!--        android:paddingRight="55dp"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/coTotalPrice"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="$ Price"-->
+<!--        android:textAlignment="textEnd"-->
+<!--        android:paddingRight="50dp">-->
+
+<!--    </TextView>-->
+
+    <Button
+        android:id="@+id/actPlaceOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="50dp"
+        android:text="Place Order">
+
+    </Button>
+
+</LinearLayout>
