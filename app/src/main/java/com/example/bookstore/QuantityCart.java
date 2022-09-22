@@ -1,27 +1,20 @@
 package com.example.bookstore;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.bumptech.glide.Glide;
-import com.google.android.gms.tasks.OnSuccessListener;
+import androidx.appcompat.app.AppCompatActivity;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.squareup.picasso.Picasso;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -33,7 +26,7 @@ public class QuantityCart extends AppCompatActivity {
     Button btPlus, btMinus, btConfirm;
     ArrayList<CartInformation> mCartInfo;
 
-    int count;
+    int count = 1;
 
     FirebaseFirestore fireStore;
     FirebaseAuth firebaseAuth;
@@ -67,6 +60,7 @@ public class QuantityCart extends AppCompatActivity {
         Picasso.get().load(image).into(qtImage);
         pdName.setText(product);
         qtPrice.setText("RM " + price);
+        qtShow.setText(""+count);
 
 
         btPlus.setOnClickListener(new View.OnClickListener() {

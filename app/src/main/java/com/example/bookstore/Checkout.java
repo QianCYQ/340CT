@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -29,8 +30,11 @@ public class Checkout extends AppCompatActivity {
     FirebaseAuth firebaseAuth;
     String userID, Address;
 
+
+    TextView TotalPrice;
     EditText coAddress;
     Button coPlaceOrder;
+    int FinalPrice;
 
     private RecyclerView recyclerView3;
     ArrayList<CheckoutInformation> mCheckoutInfo;
@@ -48,6 +52,7 @@ public class Checkout extends AppCompatActivity {
 
         coAddress = findViewById(R.id.actAddress);
         coPlaceOrder = findViewById(R.id.actPlaceOrder);
+        TotalPrice = findViewById(R.id.coTotalPrice);
 
         recyclerView3 = findViewById(R.id.RVCheckout);
         recyclerView3.setHasFixedSize(true);
@@ -97,13 +102,17 @@ public class Checkout extends AppCompatActivity {
                             String Quantity = documentSnapshot.getString("Quantity");
                             String TotalPrice = documentSnapshot.getString("TotalPrice");
 
+                            FinalPrice = FinalPrice + Integer.parseInt(TotalPrice);
+
                             CheckoutInformation CheckoutInformation = new CheckoutInformation(Product,Image,Price,Quantity,TotalPrice);
                             mCheckoutInfo.add(CheckoutInformation);
                         }
+                        TotalPrice.setText("RM " + String.valueOf(FinalPrice));
                         mCheckoutAdapter.notifyDataSetChanged();
                     }
                 });
     }
+
 
 
 }

@@ -102,9 +102,8 @@ public class CatalogueAdapter extends RecyclerView.Adapter<CatalogueAdapter.Cata
     }
 
     public static class CatalogueHolder extends RecyclerView.ViewHolder{
-        private TextView mBook_Title, mBook_Price, mBook_Genre, mBook_Description;
+        private TextView mBook_Title, mBook_Price, mBook_Genre, mBook_Description, addToCart;
         private ImageView mBook_Image;
-        private Button addToCart;
 
         public CatalogueHolder(@NonNull View itemView) {
             super(itemView);
