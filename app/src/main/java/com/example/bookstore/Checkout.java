@@ -73,6 +73,7 @@ public class Checkout extends AppCompatActivity {
                 Map<String, Object> Order = new HashMap<>();
                 Order.put("AddressOrder",Address);
                 Order.put("TheOrder",mCheckoutInfo);
+                Order.put("FinalPrice",FinalPrice);
 
                 DocumentReference orderItem = fStore.collection("User Account Information").document(userID)
                         .collection("OrderPlaced").document();
