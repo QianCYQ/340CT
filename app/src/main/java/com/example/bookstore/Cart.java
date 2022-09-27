@@ -98,7 +98,7 @@ public class Cart extends AppCompatActivity {
                 .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
                     public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        for (int x=0; x<queryDocumentSnapshots.size(); x++){
+                         for (int x=0; x<queryDocumentSnapshots.size(); x++){
                             DocumentSnapshot documentSnapshot = queryDocumentSnapshots.getDocuments().get(x);
 
                             String Product = documentSnapshot.getString("ProductName");
