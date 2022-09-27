@@ -8,13 +8,10 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -22,7 +19,7 @@ public class Home extends AppCompatActivity {
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
 
-    private CardView mBookCatalogueButton, mBookCategoryButton, mUserProfileButton, mLogoutButton, mUserCartButton, mAddBookButton;
+    private CardView mBookCatalogueButton, mBookCategoryButton, mProfileButton, mLogoutButton, mUserCartButton, mAddBookButton;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,7 +31,7 @@ public class Home extends AppCompatActivity {
 
         mBookCatalogueButton = findViewById(R.id.BookCatalogueButton);
         mBookCategoryButton = findViewById(R.id.BookCategoryButton);
-        mUserProfileButton = findViewById(R.id.UserProfileButton);
+        mProfileButton = findViewById(R.id.UserProfileButton);
         mLogoutButton = findViewById(R.id.LogoutButton);
         mUserCartButton = findViewById(R.id.UserCartButton);
         mAddBookButton = findViewById(R.id.AddBookButton);
@@ -44,14 +41,6 @@ public class Home extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, Catalogue.class);
                 startActivity(intent);
-            }
-        });
-
-        mLogoutButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                finish();
             }
         });
 
@@ -87,6 +76,22 @@ public class Home extends AppCompatActivity {
                 }).setNegativeButton("Cancel", null);
 
                 AlertDialog.create().show();
+            }
+        });
+
+        mProfileButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, Profile.class);
+                startActivity(intent);
+            }
+        });
+
+        mLogoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                finish();
             }
         });
 
