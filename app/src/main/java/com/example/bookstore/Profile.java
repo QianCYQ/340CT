@@ -63,7 +63,7 @@ public class Profile extends AppCompatActivity {
         mProfileImage = findViewById(R.id.profileImage);
         mProfileName = findViewById(R.id.profileName);
         mProfileEmail = findViewById(R.id.profileEmail);
-        //mProfilePhoneNumber = findViewById(R.id.profilePhoneNumber);
+        mProfilePhoneNumber = findViewById(R.id.profilePhoneNumber);
 
         firebaseFirestore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();
@@ -111,14 +111,14 @@ public class Profile extends AppCompatActivity {
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 String profileName = documentSnapshot.getString("Username");
                 String profileEmail = documentSnapshot.getString("Email");
-                //String profilePhoneNumber = documentSnapshot.getString("Phone Number");
+                String profilePhoneNumber = documentSnapshot.getString("Phone Number");
                 String profileImage = documentSnapshot.getString("Image");
 
                 Picasso.get().load(profileImage).into(mProfileImage);
 
                 mProfileName.setText(String.valueOf(profileName));
                 mProfileEmail.setText(String.valueOf(profileEmail));
-                //mProfilePhoneNumber.setText(String.valueOf(profilePhoneNumber));
+                mProfilePhoneNumber.setText(String.valueOf(profilePhoneNumber));
             }
         }).addOnFailureListener(new OnFailureListener() {
             @Override

@@ -10,14 +10,15 @@
     tools:context=".Profile">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="350dp"
+        android:layout_height="600dp"
         android:orientation="vertical"
-        android:background="@color/ghost_white">
+        android:background="@color/ghost_white"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="290dp"
+            android:layout_height="200dp"
             android:orientation="vertical"
             android:background="@color/ghost_white">
 
@@ -25,15 +26,15 @@
                 android:id="@+id/editButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
                 android:layout_gravity="right"
                 android:src="@drawable/ic_baseline_edit_icon">
 
             </ImageButton>
             <androidx.cardview.widget.CardView
-                android:layout_width="150dp"
-                android:layout_height="150dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center_horizontal"
                 android:foregroundGravity="center_horizontal"
                 app:cardCornerRadius="10dp">
@@ -53,22 +54,15 @@
                 android:textSize="20dp"
                 android:textColor="@color/black"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="10dp"
                 android:textStyle="bold">
 
             </TextView>
-            <Button
-                android:id="@+id/uploadProfileImage"
-                android:text="Upload Image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-            </Button>
         </LinearLayout>
         <androidx.cardview.widget.CardView
-            android:layout_width="400dp"
-            android:layout_height="150dp"
-            android:layout_marginTop="5dp"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="1dp"
             android:layout_gravity="center_horizontal"
             app:cardCornerRadius="5dp">
 
@@ -87,8 +81,8 @@
                     android:layout_marginLeft="25dp">
 
                     <ImageView
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
+                        android:layout_width="37dp"
+                        android:layout_height="35dp"
                         android:layout_marginTop="15dp"
                         android:src="@drawable/ic_baseline_email_icon">
 
@@ -103,7 +97,7 @@
                             android:layout_height="wrap_content"
                             android:text="Email:"
                             android:textColor="@color/white_smoke"
-                            android:textSize="18dp"
+                            android:textSize="15dp"
                             android:paddingLeft="15dp"
                             android:layout_gravity="center_vertical">
 
@@ -113,7 +107,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="abc123@gmail.com"
-                            android:textSize="20dp"
+                            android:textSize="18dp"
                             android:paddingLeft="15dp"
                             android:textColor="@color/white_smoke"
                             android:textStyle="bold">
@@ -123,17 +117,90 @@
                 </LinearLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            app:cardCornerRadius="5dp">
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="@drawable/blue_to_purple">
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/shoppingCartButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="320dp"
-            android:layout_marginTop="190dp"
-            android:backgroundTint="@color/purple_200"
-            android:src="@drawable/ic_baseline_shopping_cart_icon">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginLeft="25dp">
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+                    <ImageView
+                        android:layout_width="37dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="8dp"
+                        android:src="@drawable/ic_baseline_phone_icon">
+
+                    </ImageView>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Contact:"
+                            android:textColor="@color/white_smoke"
+                            android:textSize="15dp"
+                            android:paddingLeft="15dp"
+                            android:layout_gravity="center_vertical">
+
+                        </TextView>
+                        <TextView
+                            android:id="@+id/profilePhoneNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0125439876"
+                            android:textSize="18dp"
+                            android:paddingLeft="15dp"
+                            android:textColor="@color/white_smoke"
+                            android:textStyle="bold">
+
+                        </TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/uploadProfileImage"
+                android:text="Upload Image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="120dp"
+                android:backgroundTint="@color/ghost_white"
+                android:textColor="@color/sky_blue">
+
+            </Button>
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/shoppingCartButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="120dp"
+                android:backgroundTint="@color/purple_200"
+                android:src="@drawable/ic_baseline_shopping_cart_icon">
+
+            </com.google.android.material.floatingactionbutton.FloatingActionButton>
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
