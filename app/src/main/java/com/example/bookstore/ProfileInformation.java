@@ -1,12 +1,13 @@
 package com.example.bookstore;
 
 public class ProfileInformation {
-    String mProfileImage, mProfileName, mProfileEmail;
+    String mProfileImage, mProfileName, mProfileEmail, mProfilePhoneNumber;
 
-    public ProfileInformation(String profileImage, String profileName, String profileEmail){
+    public ProfileInformation(String profileImage, String profileName, String profileEmail, String profilePhoneNumber){
         mProfileImage = profileImage;
         mProfileName = profileName;
         mProfileEmail = profileEmail;
+        mProfilePhoneNumber = profilePhoneNumber;
     }
 
     public String getProfileImage(){
@@ -31,5 +32,13 @@ public class ProfileInformation {
 
     public void setProfileEmail(String profileEmail) {
         mProfileEmail = profileEmail;
+    }
+
+    public String getProfilePhoneNumber(){
+        return mProfilePhoneNumber;
+    }
+
+    public void setProfilePhoneNumber(String profilePhoneNumber) {
+        mProfilePhoneNumber = profilePhoneNumber;
     }
 }
