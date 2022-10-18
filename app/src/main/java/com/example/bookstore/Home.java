@@ -8,16 +8,24 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FieldPath;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class Home extends AppCompatActivity {
     private FirebaseAuth fAuth;
     private FirebaseFirestore fStore;
+    private String pass;
 
     private CardView mBookCatalogueButton, mBookCategoryButton, mProfileButton, mLogoutButton, mUserCartButton, mAddBookButton;
 
@@ -30,11 +38,23 @@ public class Home extends AppCompatActivity {
         fStore = FirebaseFirestore.getInstance();
 
         mBookCatalogueButton = findViewById(R.id.BookCatalogueButton);
-        mBookCategoryButton = findViewById(R.id.BookCategoryButton);
         mProfileButton = findViewById(R.id.UserProfileButton);
         mLogoutButton = findViewById(R.id.LogoutButton);
         mUserCartButton = findViewById(R.id.UserCartButton);
         mAddBookButton = findViewById(R.id.AddBookButton);
+
+        fStore.collection("PasswordForAddBook").document("tipfhLhiezAzIUwG001f").get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                if(task.isSuccessful()){
+                    DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            pass = document.getString("password");
+                        }
+                    }
+            }
+        });
+
 
         mBookCatalogueButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,7 +84,7 @@ public class Home extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
                         String AccessPassword = EnterAccessPassword.getText().toString().trim();
-                        if (AccessPassword.equals("Hello123")){
+                        if (AccessPassword.equals(pass)){
                             Intent intent = new Intent(Home.this, AddBook.class);
                             startActivity(intent);
                         }
