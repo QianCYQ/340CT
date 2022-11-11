@@ -61,11 +61,8 @@ public class Cart extends AppCompatActivity {
 //      smShow = findViewById(R.id.crtTotal);
 
         fStore = FirebaseFirestore.getInstance();
-
         firebaseAuth = FirebaseAuth.getInstance();
         userID = firebaseAuth.getCurrentUser().getUid();
-
-
 
         recyclerView2 = findViewById(R.id.RVCart);
         recyclerView2.setHasFixedSize(true);
@@ -81,10 +78,6 @@ public class Cart extends AppCompatActivity {
         coButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-///                int oneTyrProductTPrice =((Integer.parseInt(mCartInfo.get(position).getTotalPrice())));
-///                overTotalPrice = overTotalPrice + oneTyrProductTPrice;
-///                smShow.setText(String.valueOf(overTotalPrice));
 
               startActivity(new Intent(getApplicationContext(), Checkout.class));
             }

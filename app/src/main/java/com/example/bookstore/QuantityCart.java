@@ -98,8 +98,7 @@ public class QuantityCart extends AppCompatActivity {
                 Cart.put("ImageURL",image);
                 Cart.put("Quantity",qty);
 
-                DocumentReference cartItem = fireStore.collection("Cart").document(userID)
-                        .collection("Items").document();
+                DocumentReference cartItem = fireStore.collection("Cart").document(userID).collection("Items").document();
 
                 cartItem.set(Cart);
                 Toast.makeText(view.getContext(),"Cart Updated", Toast.LENGTH_LONG).show();

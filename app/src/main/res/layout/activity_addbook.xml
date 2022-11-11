@@ -100,10 +100,10 @@
                     android:id="@+id/NewBookTitle"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:singleLine="true"
+                    android:background="@color/grey"
                     android:ems="13"
                     android:padding="5dp"
-                    android:background="@color/grey"/>
+                    android:singleLine="true" />
 
             </androidx.cardview.widget.CardView>
 

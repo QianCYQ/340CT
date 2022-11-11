@@ -71,27 +71,6 @@ public class CatalogueAdapter extends RecyclerView.Adapter<CatalogueAdapter.Cata
                 i.putExtra("Price", bookPrice);
                 view.getContext().startActivity(i);
 
-//                Map<String, Object> Cart = new HashMap<>();
-//                Cart.put("ProductName",bookTitle);
-//                Cart.put("Price",bookPrice);
-//                Cart.put("ImageURL",bookImage);
-//
-//                DocumentReference cartItem = fireStore.collection("Cart").document(userID)
-//                        .collection("Items").document();
-//
-//                cartItem.set(Cart);
-//                        Toast.makeText(view.getContext(),"Cart Updated", Toast.LENGTH_LONG).show();
-//                        Intent intent = new Intent(mContext, Cart.class);
-//                        mContext.startActivity(intent);
-
-///               fireStore.collection("Cart").document(userID).co(Cart).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-//                    @Override
-//                    public void onSuccess(DocumentReference documentReference) {
-//                        Toast.makeText(view.getContext(),"Cart Updated", Toast.LENGTH_LONG).show();
-//                        Intent intent = new Intent(mContext, Cart.class);
-//                        mContext.startActivity(intent);
-//                    }
-//                });
             }
         });
     }

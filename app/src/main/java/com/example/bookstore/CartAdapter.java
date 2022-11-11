@@ -54,7 +54,7 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartHolder> {
         holder.mBook_TotalPrice2.setText(mCartInformation.get(position).getTotalPrice());
         holder.mBook_Quantity2.setText(mCartInformation.get(position).getBookQuantity());
 
-        String id =mCartInformation.get(position).getBookRemove();
+        String id = mCartInformation.get(position).getBookRemove();
 
         fireStore = FirebaseFirestore.getInstance();
         firebaseAuth = FirebaseAuth.getInstance();

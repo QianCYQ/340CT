@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,7 +30,6 @@ public class Checkout extends AppCompatActivity {
     private FirebaseFirestore fStore;
     FirebaseAuth firebaseAuth;
     String userID, Address;
-
 
     TextView TotalPrice;
     EditText coAddress;
@@ -69,6 +69,12 @@ public class Checkout extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Address = coAddress.getText().toString();
+
+                if(TextUtils.isEmpty(Address)){
+                    coAddress.setError("Please enter an address.");
+                    coAddress.requestFocus();
+                    return;
+                }
 
                 Map<String, Object> Order = new HashMap<>();
                 Order.put("AddressOrder",Address);
